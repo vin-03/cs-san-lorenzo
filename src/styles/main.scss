@@ -1,10 +1,6 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@use "./variables" as *;
+@use "./mixins" as *;
 
-@import "base/reset";
-@import "base/typography";
-@import "base/globals";
-
-@import "layout/container";
-@import "layout/grid";
+@use "./reset";
+@use "./typography";
+@use "./containers";

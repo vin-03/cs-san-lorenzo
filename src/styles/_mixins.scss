@@ -1,0 +1,22 @@
+@use "./variables" as *;
+
+@mixin container-flex {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display: flex;
+
+    @media (min-width: 768px) {
+        padding: 10px 32px;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin transition {
+    transition: all 0.3s ease;
+}

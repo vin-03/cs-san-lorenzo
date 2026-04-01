@@ -1,9 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@use "../styles/main";
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+header svg {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: $font-body;
+    background-color: $color-surface;
+    color: $color-on-surface;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-headline;
 }

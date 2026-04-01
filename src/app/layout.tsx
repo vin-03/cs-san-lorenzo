@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "./globals.scss";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const manrope = Manrope({
     subsets: ["latin"],
+    weight: ["400", "500", "700", "800"],
+    variable: "--font-headline",
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const inter = Inter({
     subsets: ["latin"],
+    weight: ["400", "500", "600"],
+    variable: "--font-body",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Centro Sportivo",
     description: "Sito ufficiale",
 };
@@ -24,7 +26,15 @@ export default function RootLayout({
 }) {
     return (
         <html lang="it">
-            <body>{children}</body>
+            <head>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+                    rel="stylesheet"
+                />
+            </head>
+            <body className={`${manrope.variable} ${inter.variable}`}>
+                {children}
+            </body>
         </html>
     );
 }
