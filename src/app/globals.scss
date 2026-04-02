@@ -8,10 +8,13 @@ header svg {
     display: block;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $font-body;
-    background-color: $color-surface;
-    color: $color-on-surface;
+    color: $color-text-paragraph;
 }
 
 h1,
@@ -19,4 +22,9 @@ h2,
 h3,
 h4 {
     font-family: $font-headline;
+    color: $color-text-title;
+}
+
+section {
+    scroll-margin-top: 80px;
 }

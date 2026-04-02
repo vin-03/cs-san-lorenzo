@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 
@@ -16,8 +16,8 @@ export default function Header() {
         { href: "#campi", label: "Campi" },
         { href: "#corsi", label: "Corsi" },
         { href: "#about", label: "Chi Siamo" },
-        { href: "info", label: "Info" },
-        { href: "contatti", label: "Contatti" },
+        { href: "#info", label: "Info" },
+        { href: "#contatti", label: "Contatti" },
     ];
 
     return (
@@ -66,13 +66,16 @@ export default function Header() {
                     </button>
                 </div>
             </div>
-
             {/* Link Nav Mobile */}
             <nav className={`${styles.navMobile} ${isOpen ? styles.open : ""}`}>
                 <ul className={styles.navMobileUl}>
                     {navLinks.map((link) => (
                         <li key={link.href}>
-                            <a href={link.href} className={styles.navLink}>
+                            <a
+                                href={link.href}
+                                className={styles.navLink}
+                                onClick={toggleMenu}
+                            >
                                 {link.label}
                             </a>
                         </li>
