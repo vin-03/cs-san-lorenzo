@@ -1,0 +1,101 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.info {
+    padding: 6rem 2rem; // py-24 px-8
+    background-color: white;
+    border-top: 1px solid $color-background-3;
+}
+
+.container {
+    max-width: 80rem; // max-w-7xl
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.sectionTitle {
+    color: $color-accent-1;
+    font-weight: 800;
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.textPrimary {
+    color: $color-text-title;
+}
+
+.hours {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hourRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e8eff3;
+    font-weight: 500;
+}
+
+.hour {
+    background-color: $color-background-3;
+    color: var(--on-surface-variant);
+    font-size: 0.875rem; // text-sm
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem; // rounded-lg
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media (min-width: 640px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.infoCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: $color-background-1;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--surface-container);
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 0.875rem;
+    }
+
+    p {
+        font-size: 0.75rem;
+        color: var(--on-surface-variant);
+        margin-top: 0.25rem;
+    }
+}
+
+.icon {
+    background-color: $color-accent-2;
+    color: $color-accent-1;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}

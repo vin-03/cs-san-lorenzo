@@ -123,7 +123,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 14px;
+    gap: 8px;
 }
 /* ===============
    WHATSAPP BUTTON
@@ -131,7 +131,7 @@
 
 .whatsappBtn {
     @include flex-center;
-    padding: 10px;
+    padding: 8px;
     background-color: $color-whatsapp;
     border-radius: 0.75rem;
     transition: all 0.3s ease;

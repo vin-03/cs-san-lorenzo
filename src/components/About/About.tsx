@@ -1,13 +1,17 @@
+"use client";
+
+import styles from "./About.module.scss";
+
 export default function About() {
     return (
-        <section id="about">
-            <div>
-                <span>La Nostra Storia</span>
-                <h2>
+        <section className={styles.about} id="about">
+            <div className={styles.container}>
+                <span className={styles.subtitle}>La Nostra Storia</span>
+                <h2 className={styles.title}>
                     Passione per lo Sport, <br />
                     Impegno per la Comunità
                 </h2>
-                <div>
+                <div className={styles.text}>
                     <p>
                         Nato con l'obiettivo di creare un polo aggregativo
                         d'eccellenza, il Centro Sportivo San Lorenzo è oggi una

@@ -1,0 +1,149 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.cta {
+    padding: 8rem 1.5rem; // py-32 px-6
+}
+
+.container {
+    max-width: 80rem; // max-w-7xl
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3rem;
+    background-color: var(--on-surface);
+    box-shadow: 0 40px 100px -20px rgba(12, 86, 208, 0.3);
+}
+
+.bgImage {
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+
+    .image {
+        object-fit: cover;
+        transition: transform 1s ease;
+    }
+
+    .card:hover & .image {
+        transform: scale(1.05);
+    }
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom right,
+        // equivalente a bg-gradient-to-br
+        rgba(12, 86, 208, 0.95),
+        // from-primary/95
+        rgba(12, 86, 208, 0.8) 50%,
+        // via-primary/80
+        rgba(0, 0, 0, 0.707) // to-transparent
+    );
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    padding: 5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.text {
+    max-width: 48rem;
+    color: white;
+
+    h2 {
+        font-size: 2.25rem;
+        font-weight: 900;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        color: white;
+
+        @media (min-width: 768px) {
+            font-size: 3.75rem;
+        }
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.75;
+        color: #ffffffcc;
+
+        @media (min-width: 768px) {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    @media (min-width: 640px) {
+        flex-direction: row;
+    }
+}
+
+.whatsappBtn {
+    background-color: $color-whatsapp;
+    color: white;
+    padding: 1.5rem 2.5rem;
+    border-radius: 1.25rem;
+    font-weight: 900;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 20px 40px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+
+    .icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: white;
+    }
+}
+
+.callBtn {
+    background-color: white;
+    color: $color-accent-1;
+    padding: 1.5rem 2.5rem;
+    border-radius: 1.25rem;
+    font-weight: 900;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    span {
+        font-size: 1.5rem;
+    }
+}

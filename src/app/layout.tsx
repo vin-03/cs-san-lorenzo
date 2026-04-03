@@ -15,8 +15,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Centro Sportivo",
-    description: "Sito ufficiale",
+    title: "San Lorenzo Sport",
+    description: "Sito Centro sportivo San Lorenzo",
+    icons: {
+        icon: "/favicon.svg",
+    },
 };
 
 export default function RootLayout({
