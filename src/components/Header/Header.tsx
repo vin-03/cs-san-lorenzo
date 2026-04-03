@@ -7,8 +7,9 @@ import Link from "next/link";
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const phone = "393391085612";
-    const message = "Ciao, vorrei avere più informazioni sui vostri servizi";
+    const phone = "393282774412";
+    const message =
+        "Ciao! Vorrei info sugli orari di apertura e sulla disponibilità dei campi per questa settimana.";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
     const toggleMenu = () => {
