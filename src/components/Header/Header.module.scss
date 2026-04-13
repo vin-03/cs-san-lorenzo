@@ -84,7 +84,13 @@
 
 .navDesktopUl {
     display: flex;
-    gap: 2rem;
+    gap: 1.3rem;
+}
+
+@media (min-width: 900px) {
+    .navDesktopUl {
+        gap: 2rem;
+    }
 }
 
 .navLink {
@@ -114,7 +120,11 @@
         }
     }
 }
-
+@media (max-width: 900px) {
+    .navLink {
+        font-size: 0.9rem;
+    }
+}
 /* ============================================
    HEADER BUTTONS
    ============================================ */
@@ -131,12 +141,17 @@
 
 .whatsappBtn {
     @include flex-center;
-    padding: 8px;
+    gap: 0.5rem;
+    padding: 10px 14px;
     background-color: $color-whatsapp;
     border-radius: 0.75rem;
     transition: all 0.3s ease;
     color: white;
     box-shadow: 0 4px 14px 0 rgba(37, 211, 102, 0.39);
+
+    & .text {
+        font-weight: 600;
+    }
 }
 
 .whatsappBtn:hover {
@@ -148,6 +163,16 @@
     height: 1.5rem; /* h-6 = 24px */
     fill: currentColor; /* fill-current */
     display: block;
+}
+
+@media (max-width: 768px) {
+    .whatsappBtn {
+        padding: 8px;
+
+        .text {
+            display: none;
+        }
+    }
 }
 
 /* ================
@@ -238,10 +263,6 @@
     @media (min-width: 768px) {
         display: none !important;
     }
-}
-
-.navMobileUl li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .navMobile .navLink {
