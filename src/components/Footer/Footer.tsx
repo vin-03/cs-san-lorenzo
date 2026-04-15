@@ -61,19 +61,19 @@ export default function Footer() {
                             <span className="material-symbols-outlined">
                                 location_on
                             </span>
-                            Via Roma 123, 00100 Italy
+                            via San Lorenzo 1, Mercato San Severino
                         </li>
                         <li>
                             <span className="material-symbols-outlined">
                                 phone
                             </span>
-                            +39 012 345 6789
+                            +39 389 843 7596
                         </li>
                         <li>
                             <span className="material-symbols-outlined">
                                 mail
                             </span>
-                            info@sanlorenzo.it
+                            sanlorenzosport@libero.it
                         </li>
                     </ul>
                 </div>
@@ -94,8 +94,7 @@ export default function Footer() {
 
             {/* Footer Bottom */}
             <div className={styles.bottom}>
-                © 2024 Centro Sportivo San Lorenzo. Tutti i diritti riservati.
-                P.IVA 0123456789
+                © 2026 Centro Sportivo San Lorenzo. Tutti i diritti riservati.
             </div>
         </footer>
     );
