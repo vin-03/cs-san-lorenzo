@@ -35,7 +35,12 @@ export default function Header() {
                     >
                         sports_volleyball
                     </span>
-                    <span className={styles.logoText}>San Lorenzo</span>
+                    <div className={styles.logoText}>
+                        <span className={styles.logoTitle}>San Lorenzo</span>
+                        <span className={styles.logoSubTitle}>
+                            Centro Sportivo
+                        </span>
+                    </div>
                 </a>
 
                 {/* Link nav desktop */}
